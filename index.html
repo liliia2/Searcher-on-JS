@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <title>Searcher</title>
+  <link rel="stylesheet" href="css/styles.css" />
+</head>
+
+<body>
+  <div class="search-page">
+    <div class="content">
+      <h1>Поиск</h1>
+      <div class="search">
+        <input 
+          type="text" 
+          placeholder="Введите текст для поиска" 
+          id="searchText" 
+          onKeydown="keyClick()"
+          onclick="checkError()"
+        >
+        <select id="searchSystem" onclick="checkError()">
+          <option selected>Укажите поисковую систему</option>
+          <option value="google">Google</option>
+          <option value="bing">Bing</option>
+          <option value="ask">Ask</option>
+        </select>
+        <button type="button" onclick="searchText()">Искать</button>
+      </div>
+      <span class="error" id="errorText"></span>
+    </div>
+  </div>
+</body>
+
+<script async type="text/javascript" src="js/script.js"></script>
+
+</html>
